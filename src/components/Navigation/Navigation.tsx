@@ -44,22 +44,24 @@ export function Navigation({ currentEra }: NavigationProps) {
       transition={{ duration: 0.5, delay: 0.8 }}
     >
       <div className={styles.container}>
-        <span className={styles.label}>Navigate to:</span>
-        <div className={styles.buttons}>
-          {ERAS.map((era) => (
-            <a
-              key={era.id}
-              className={`${styles.button} ${currentEra === era.id ? styles.active : ''}`}
-              href={`#era-${era.id}`}
-              onClick={(event) => scrollToEra(event, era.id)}
-              aria-current={currentEra === era.id ? 'location' : undefined}
-            >
-              <span className={styles.buttonText}>{era.name}</span>
-              <span className={styles.buttonYears}>
-                {formatYear(era.startYear)}–{formatYear(era.endYear)}
-              </span>
-            </a>
-          ))}
+        <div className={styles.centerGroup}>
+          <span className={styles.label}>Navigate to:</span>
+          <div className={styles.buttons}>
+            {ERAS.map((era) => (
+              <a
+                key={era.id}
+                className={`${styles.button} ${currentEra === era.id ? styles.active : ''}`}
+                href={`#era-${era.id}`}
+                onClick={(event) => scrollToEra(event, era.id)}
+                aria-current={currentEra === era.id ? 'location' : undefined}
+              >
+                <span className={styles.buttonText}>{era.name}</span>
+                <span className={styles.buttonYears}>
+                  {formatYear(era.startYear)}–{formatYear(era.endYear)}
+                </span>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </motion.nav>
