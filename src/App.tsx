@@ -36,23 +36,6 @@ function App() {
       <Header />
       <Navigation currentEra={currentEra} />
 
-      <section className={styles.jumpLinks} aria-label="Jump to Roman eras">
-        <div className={styles.contentContainer}>
-          <p className={styles.jumpLinksLabel}>Jump directly to each Roman era:</p>
-          <ul className={styles.jumpLinksList}>
-            <li>
-              <a href="#era-kingdom">Roman Kingdom timeline (753 BC to 509 BC)</a>
-            </li>
-            <li>
-              <a href="#era-republic">Roman Republic timeline (509 BC to 27 BC)</a>
-            </li>
-            <li>
-              <a href="#era-empire">Roman Empire timeline (27 BC to 476 AD)</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
       <section className={styles.seoSection} aria-labelledby="rome-timeline-overview">
         <div className={styles.contentContainer}>
           <h2 id="rome-timeline-overview">Timeline of Rome: major events from 753 BC to 476 AD</h2>
