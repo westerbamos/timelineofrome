@@ -215,7 +215,7 @@
 
 .minor .title {
   font-size: 1rem;
-  margin: 0;
+  margin: 0 0 var(--spacing-xs);
 }
 
 .summary {
@@ -224,6 +224,15 @@
   color: var(--color-ink-brown);
   line-height: 1.6;
   margin: 0 0 var(--spacing-sm);
+}
+
+.permalink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.permalink:hover {
+  color: var(--color-accent-red);
 }
 
 .expandHint {

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Timeline of Rome social preview</title>
+  <desc id="desc">A decorative title card for Timeline of Rome showing the years 753 BC to 476 AD.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#faf3e3"/>
+      <stop offset="100%" stop-color="#f5e6c8"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="50%" stop-color="#b8860b"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="100" y="128" width="1000" height="374" rx="20" fill="#e8d4a8" stroke="#d4c4a0" stroke-width="2"/>
+
+  <text x="600" y="236" text-anchor="middle" font-size="42" letter-spacing="8" fill="#8b6b4a" font-family="EB Garamond, serif" font-style="italic">
+    A Visual Journey Through
+  </text>
+  <text x="600" y="322" text-anchor="middle" font-size="82" letter-spacing="10" fill="#2c1810" font-family="Cinzel Decorative, serif" font-weight="700">
+    TIMELINE OF ROME
+  </text>
+  <text x="600" y="388" text-anchor="middle" font-size="38" letter-spacing="12" fill="#b8860b" font-family="Cinzel, serif" font-weight="600">
+    753 BC - 476 AD
+  </text>
+
+  <rect x="240" y="432" width="720" height="3" fill="url(#line)"/>
+  <text x="600" y="476" text-anchor="middle" font-size="30" fill="#5c3d2e" font-family="EB Garamond, serif">
+    Major events in the Roman Kingdom, Republic, and Empire
+  </text>
+</svg>

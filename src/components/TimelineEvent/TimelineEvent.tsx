@@ -15,6 +15,7 @@ export function TimelineEventComponent({ event, index }: TimelineEventProps) {
 
   return (
     <motion.article
+      id={`event-${event.id}`}
       className={`${styles.event} ${isMajor ? styles.major : styles.minor}`}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -57,11 +58,12 @@ export function TimelineEventComponent({ event, index }: TimelineEventProps) {
           )}
 
           <div className={styles.content}>
-            <h3 className={styles.title}>{event.title}</h3>
-
-            {isMajor && (
-              <p className={styles.summary}>{event.summary}</p>
-            )}
+            <h3 className={styles.title}>
+              <a href={`#event-${event.id}`} className={styles.permalink}>
+                {event.title}
+              </a>
+            </h3>
+            <p className={styles.summary}>{event.summary}</p>
 
             <span className={styles.expandHint}>
               {isExpanded ? 'Click to collapse' : 'Click to read more'}

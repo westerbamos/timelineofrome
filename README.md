@@ -42,7 +42,7 @@ This repo includes a GitHub Actions workflow at `.github/workflows/deploy.yml` t
 Vite is configured with:
 
 ```ts
-base: '/timelineofrome/'
+base: '/'
 ```
 
-so it serves correctly from the repository Pages path.
+so it serves correctly from the custom domain root.

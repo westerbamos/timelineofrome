@@ -20,11 +20,6 @@ export function EventDetail({ id, event }: EventDetailProps) {
       <div className={styles.content}>
         <div className={styles.divider} />
 
-        {/* Show summary for minor events that don't display it by default */}
-        {event.significance === 'minor' && (
-          <p className={styles.summary}>{event.summary}</p>
-        )}
-
         <p className={styles.description}>{event.description}</p>
 
         {event.imageCredit && (

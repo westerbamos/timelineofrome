@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, type MouseEvent } from 'react';
 import { motion } from 'framer-motion';
 import { ERAS, type EraType } from '../../types';
 import styles from './Navigation.module.css';
@@ -19,13 +19,16 @@ export function Navigation({ currentEra }: NavigationProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToEra = (eraId: EraType) => {
+  const scrollToEra = (event: MouseEvent<HTMLAnchorElement>, eraId: EraType) => {
+    event.preventDefault();
+
     const element = document.getElementById(`era-${eraId}`);
     if (element) {
       const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - offset;
 
+      window.history.pushState(null, '', `#era-${eraId}`);
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth',
@@ -44,17 +47,18 @@ export function Navigation({ currentEra }: NavigationProps) {
         <span className={styles.label}>Navigate to:</span>
         <div className={styles.buttons}>
           {ERAS.map((era) => (
-            <button
+            <a
               key={era.id}
               className={`${styles.button} ${currentEra === era.id ? styles.active : ''}`}
-              onClick={() => scrollToEra(era.id)}
-              aria-current={currentEra === era.id ? 'true' : undefined}
+              href={`#era-${era.id}`}
+              onClick={(event) => scrollToEra(event, era.id)}
+              aria-current={currentEra === era.id ? 'location' : undefined}
             >
               <span className={styles.buttonText}>{era.name}</span>
               <span className={styles.buttonYears}>
                 {formatYear(era.startYear)}–{formatYear(era.endYear)}
               </span>
-            </button>
+            </a>
           ))}
         </div>
       </div>
