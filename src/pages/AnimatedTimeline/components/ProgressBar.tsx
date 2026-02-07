@@ -38,19 +38,7 @@ export function ProgressBar({ currentIndex, onNavigate }: ProgressBarProps) {
               onClick={() => onNavigate(i)}
               aria-label={`${event.title} (${event.yearDisplay})`}
               aria-current={isActive ? 'step' : undefined}
-            >
-              {isActive && (
-                <span className={styles.pulseAnchor} aria-hidden="true">
-                  <motion.span
-                    className={styles.pulse}
-                    style={{ borderColor: eraColor }}
-                    initial={{ scale: 1, opacity: 0.6 }}
-                    animate={{ scale: 2, opacity: 0 }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  />
-                </span>
-              )}
-            </button>
+            />
           );
         })}
       </div>
