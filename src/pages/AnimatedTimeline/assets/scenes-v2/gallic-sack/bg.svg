@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="storm" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#120b08"/>
+      <stop offset="48%" stop-color="#3a2018"/>
+      <stop offset="100%" stop-color="#100906"/>
+    </linearGradient>
+    <radialGradient id="fire" cx="72%" cy="46%" r="48%">
+      <stop offset="0%" stop-color="#d97a54" stop-opacity="0.54"/>
+      <stop offset="100%" stop-color="#d97a54" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="leftshade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0d0705" stop-opacity="0.92"/>
+      <stop offset="64%" stop-color="#0d0705" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0d0705" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#storm)"/>
+  <rect width="1600" height="900" fill="url(#fire)"/>
+  <path d="M0 620L110 520L220 620L330 508L430 620L540 535L660 620L780 510L920 620L1040 500L1180 620L1300 528L1430 620L1600 560V900H0Z" fill="#28170f"/>
+  <g fill="#5d3324" opacity="0.9">
+    <rect x="232" y="500" width="80" height="130"/>
+    <rect x="472" y="480" width="72" height="150"/>
+    <rect x="864" y="470" width="88" height="160"/>
+    <rect x="1120" y="456" width="88" height="176"/>
+    <rect x="1348" y="490" width="74" height="140"/>
+  </g>
+  <rect width="930" height="900" fill="url(#leftshade)"/>
+</svg>

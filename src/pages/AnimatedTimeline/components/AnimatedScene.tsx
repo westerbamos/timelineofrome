@@ -1,11 +1,16 @@
 import { motion } from 'framer-motion';
 import type { AnimatedEvent } from '../data/animatedEvents';
+import { getSceneSpec } from '../data/sceneSpecs';
 import { illustrations } from '../illustrations';
+import { CinematicScene } from './CinematicScene';
+import type { SceneAssetVersion } from '../types/scene';
 import styles from './AnimatedScene.module.css';
 
 interface AnimatedSceneProps {
   event: AnimatedEvent;
   direction: number;
+  prefersReducedMotion: boolean;
+  sceneVersion?: SceneAssetVersion;
 }
 
 const variants = {
@@ -26,7 +31,20 @@ const variants = {
   }),
 };
 
-export function AnimatedScene({ event, direction }: AnimatedSceneProps) {
+export function AnimatedScene({
+  event,
+  direction,
+  prefersReducedMotion,
+  sceneVersion,
+}: AnimatedSceneProps) {
+  const sceneSpec = getSceneSpec(event.id, { version: sceneVersion });
+  const fallbackKey = sceneSpec.fallbackIllustrationKey ?? event.id;
+  const LegacyIllustration = illustrations[fallbackKey];
+
+  const fallbackScene = LegacyIllustration
+    ? <LegacyIllustration />
+    : <DefaultScene title={event.title} />;
+
   const Illustration = illustrations[event.id];
 
   return (
@@ -43,7 +61,18 @@ export function AnimatedScene({ event, direction }: AnimatedSceneProps) {
       }}
     >
       <div className={styles.illustrationWrapper}>
-        {Illustration ? <Illustration /> : <DefaultScene title={event.title} />}
+        {sceneSpec.renderMode === 'cinematic-hybrid' ? (
+          <CinematicScene
+            event={event}
+            spec={sceneSpec}
+            fallback={fallbackScene}
+            prefersReducedMotion={prefersReducedMotion}
+          />
+        ) : Illustration ? (
+          <Illustration />
+        ) : (
+          <DefaultScene title={event.title} />
+        )}
       </div>
     </motion.div>
   );

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#151720"/>
+      <stop offset="46%" stop-color="#4d5265"/>
+      <stop offset="100%" stop-color="#18151b"/>
+    </linearGradient>
+    <linearGradient id="river" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6f7d93" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#8d99ad" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="left" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0d0d13" stop-opacity="0.88"/>
+      <stop offset="64%" stop-color="#0d0d13" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0d0d13" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <path d="M0 640C230 610 460 618 700 650C960 684 1240 684 1600 650V740C1260 768 980 768 710 734C470 704 232 700 0 730Z" fill="url(#river)"/>
+  <path d="M0 580L190 540L420 560L680 530L950 560L1180 530L1410 556L1600 540V900H0Z" fill="#262432" opacity="0.78"/>
+  <rect width="920" height="900" fill="url(#left)"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <g opacity="0.78">
+    <path d="M1235 760C1270 704 1350 690 1406 730C1364 734 1320 758 1290 798Z" fill="#d1ab78"/>
+    <path d="M1288 784C1312 742 1370 732 1415 760C1380 766 1344 784 1320 818Z" fill="#b8864c"/>
+    <path d="M1328 816C1352 776 1405 770 1444 796C1410 800 1378 818 1356 848Z" fill="#d1ab78"/>
+  </g>
+  <g opacity="0.72" transform="translate(220 0) scale(-1 1)">
+    <path d="M1235 760C1270 704 1350 690 1406 730C1364 734 1320 758 1290 798Z" fill="#d1ab78"/>
+    <path d="M1288 784C1312 742 1370 732 1415 760C1380 766 1344 784 1320 818Z" fill="#b8864c"/>
+    <path d="M1328 816C1352 776 1405 770 1444 796C1410 800 1378 818 1356 848Z" fill="#d1ab78"/>
+  </g>
+  <rect x="640" y="752" width="320" height="70" rx="10" fill="#24140c" opacity="0.86"/>
+  <text x="800" y="796" text-anchor="middle" fill="#dfbf8f" font-family="Cinzel, serif" font-size="40" letter-spacing="5" opacity="0.84">SPQR</text>
+</svg>

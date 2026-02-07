@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <g opacity="0.96">
+    <path d="M560 565L620 515L680 565Z" fill="#8b5f43"/>
+    <path d="M645 555L708 506L772 555Z" fill="#8b5f43"/>
+    <path d="M738 550L805 500L872 550Z" fill="#8b5f43"/>
+    <rect x="568" y="564" width="112" height="66" fill="#5a3928"/>
+    <rect x="652" y="554" width="118" height="72" fill="#5a3928"/>
+    <rect x="746" y="548" width="124" height="80" fill="#5a3928"/>
+    <path d="M760 628L744 566H878L890 628Z" fill="#3c2519"/>
+  </g>
+  <g fill="#d9b68a" opacity="0.84">
+    <circle cx="620" cy="606" r="8"/>
+    <rect x="614" y="612" width="11" height="23" rx="4"/>
+    <circle cx="654" cy="602" r="7"/>
+    <rect x="649" y="608" width="10" height="25" rx="4"/>
+    <circle cx="702" cy="598" r="7"/>
+    <rect x="697" y="604" width="10" height="27" rx="4"/>
+  </g>
+  <path d="M532 638C554 604 594 588 634 595C666 600 693 620 704 646C668 642 624 650 592 668C569 658 548 650 532 638Z" fill="#4a2e20"/>
+  <path d="M548 642C567 622 598 612 626 618C606 634 590 648 576 668" stroke="#c89b71" stroke-width="5" fill="none" opacity="0.75"/>
+  <path d="M830 522L870 420" stroke="#d8bd8e" stroke-width="6" opacity="0.75"/>
+  <path d="M870 420L906 436L870 445" fill="#d8bd8e" opacity="0.8"/>
+</svg>

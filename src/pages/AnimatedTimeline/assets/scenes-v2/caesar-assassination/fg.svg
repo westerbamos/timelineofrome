@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <path d="M0 784C250 746 510 748 780 780C1020 808 1270 808 1600 784V900H0Z" fill="#0f0906" opacity="0.9"/>
+  <path d="M960 760L1080 760L1034 820L914 820Z" fill="#d7c1a1" opacity="0.42"/>
+  <path d="M1048 748L1130 760L1096 804L1016 792Z" fill="#d7c1a1" opacity="0.36"/>
+  <path d="M896 742L944 760" stroke="#d7c1a1" stroke-width="6" opacity="0.46"/>
+</svg>

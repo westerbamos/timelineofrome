@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <radialGradient id="fire" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#efb178" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#efb178" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <path d="M0 770C220 730 380 728 600 764C770 792 980 796 1250 772C1390 760 1490 760 1600 780V900H0Z" fill="#110b06" opacity="0.92"/>
+  <ellipse cx="702" cy="716" rx="120" ry="58" fill="url(#fire)"/>
+  <path d="M700 742C676 722 684 698 702 678C722 699 726 723 700 742Z" fill="#e29a63" opacity="0.85"/>
+  <path d="M700 730C688 716 692 700 702 688C713 700 715 717 700 730Z" fill="#f2c995" opacity="0.8"/>
+  <g stroke="#1f140b" stroke-width="6" stroke-linecap="round" opacity="0.85">
+    <path d="M210 770L190 820"/>
+    <path d="M250 770L246 826"/>
+    <path d="M300 774L314 824"/>
+    <path d="M1280 774L1266 826"/>
+    <path d="M1320 770L1324 828"/>
+    <path d="M1370 772L1388 824"/>
+  </g>
+</svg>

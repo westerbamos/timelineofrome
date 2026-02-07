@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <radialGradient id="dust" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#d9a373" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#d9a373" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <path d="M0 770C260 730 470 734 700 770C930 804 1160 802 1410 776C1490 768 1540 770 1600 784V900H0Z" fill="#110b07" opacity="0.9"/>
+  <ellipse cx="760" cy="700" rx="260" ry="94" fill="url(#dust)"/>
+  <ellipse cx="1040" cy="708" rx="230" ry="90" fill="url(#dust)"/>
+  <g stroke="#1e130b" stroke-width="7" stroke-linecap="round" opacity="0.86">
+    <path d="M180 768L160 842"/>
+    <path d="M240 772L244 840"/>
+    <path d="M1320 770L1310 844"/>
+    <path d="M1380 770L1402 842"/>
+  </g>
+</svg>

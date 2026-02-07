@@ -208,3 +208,91 @@ export function Flame({
     </motion.g>
   );
 }
+
+/** Ambient mote used in cinematic overlays */
+export function DustMote({
+  cx,
+  cy,
+  r = 2,
+  color = '#E8C99B',
+  delay = 0,
+  reducedMotion = false,
+}: {
+  cx: number;
+  cy: number;
+  r?: number;
+  color?: string;
+  delay?: number;
+  reducedMotion?: boolean;
+}) {
+  if (reducedMotion) {
+    return <circle cx={cx} cy={cy} r={r} fill={color} opacity="0.3" />;
+  }
+
+  return (
+    <motion.circle
+      cx={cx}
+      cy={cy}
+      r={r}
+      fill={color}
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: [0.1, 0.55, 0.2, 0.1],
+        cx: [cx, cx + 8, cx + 3, cx],
+        cy: [cy, cy - 18, cy - 8, cy],
+      }}
+      transition={{
+        duration: 8,
+        delay,
+        repeat: Infinity,
+        ease: 'easeInOut',
+      }}
+    />
+  );
+}
+
+/** Laurel accent that can be layered over cinematic scenes */
+export function LaurelSprig({
+  x,
+  y,
+  scale = 1,
+  delay = 0,
+  color = '#B8860B',
+}: {
+  x: number;
+  y: number;
+  scale?: number;
+  delay?: number;
+  color?: string;
+}) {
+  return (
+    <motion.g
+      transform={`translate(${x}, ${y}) scale(${scale})`}
+      initial={{ opacity: 0, rotate: -6 }}
+      animate={{ opacity: 1, rotate: 0 }}
+      transition={{ duration: 0.8, delay }}
+    >
+      <DrawPath d="M0,0 Q12,-30 26,-56" stroke={color} strokeWidth={2} delay={delay} duration={0.9} />
+      {[
+        { x: -4, y: -8, w: 9, h: 4, r: -20 },
+        { x: 4, y: -18, w: 10, h: 4, r: 15 },
+        { x: -1, y: -29, w: 10, h: 4, r: -18 },
+        { x: 8, y: -40, w: 11, h: 4, r: 16 },
+        { x: 4, y: -50, w: 9, h: 4, r: -12 },
+      ].map((leaf, index) => (
+        <motion.ellipse
+          key={index}
+          cx={leaf.x}
+          cy={leaf.y}
+          rx={leaf.w}
+          ry={leaf.h}
+          fill={color}
+          transform={`rotate(${leaf.r} ${leaf.x} ${leaf.y})`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.7 }}
+          transition={{ delay: delay + 0.18 + index * 0.05, duration: 0.45 }}
+        />
+      ))}
+    </motion.g>
+  );
+}

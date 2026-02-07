@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#20120c"/>
+      <stop offset="42%" stop-color="#6a3a25"/>
+      <stop offset="100%" stop-color="#180f08"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="66%" cy="28%" r="46%">
+      <stop offset="0%" stop-color="#d9a16f" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#d9a16f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="leftshade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#100906" stop-opacity="0.9"/>
+      <stop offset="62%" stop-color="#100906" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#100906" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <rect width="1600" height="900" fill="url(#sun)"/>
+  <path d="M0 640C250 598 520 602 790 638C1070 674 1340 674 1600 640V900H0Z" fill="#322012" opacity="0.84"/>
+  <path d="M0 728C280 700 560 704 840 730C1098 754 1360 756 1600 736V900H0Z" fill="#24150d" opacity="0.82"/>
+  <rect width="940" height="900" fill="url(#leftshade)"/>
+</svg>

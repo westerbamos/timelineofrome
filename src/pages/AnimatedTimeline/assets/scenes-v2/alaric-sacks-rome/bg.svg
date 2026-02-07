@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#150d09"/>
+      <stop offset="48%" stop-color="#4f281d"/>
+      <stop offset="100%" stop-color="#120b07"/>
+    </linearGradient>
+    <radialGradient id="fire" cx="72%" cy="44%" r="48%">
+      <stop offset="0%" stop-color="#d07a56" stop-opacity="0.46"/>
+      <stop offset="100%" stop-color="#d07a56" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="left" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0d0705" stop-opacity="0.92"/>
+      <stop offset="64%" stop-color="#0d0705" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0d0705" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <rect width="1600" height="900" fill="url(#fire)"/>
+  <path d="M500 460H1140V710H500Z" fill="#2b1810" opacity="0.92"/>
+  <rect x="760" y="540" width="120" height="170" fill="#160d08" opacity="0.95"/>
+  <path d="M0 730C280 700 560 704 860 738C1120 768 1360 770 1600 744V900H0Z" fill="#1f130c"/>
+  <rect width="930" height="900" fill="url(#left)"/>
+</svg>

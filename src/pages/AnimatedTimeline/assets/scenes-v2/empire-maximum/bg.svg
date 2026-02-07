@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5e3a23"/>
+      <stop offset="100%" stop-color="#2f1e14"/>
+    </linearGradient>
+    <linearGradient id="left" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#21150e" stop-opacity="0.82"/>
+      <stop offset="60%" stop-color="#21150e" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#21150e" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#paper)"/>
+  <g stroke="#8f633f" stroke-width="3" opacity="0.45">
+    <path d="M120 220H1480"/><path d="M120 330H1480"/><path d="M120 440H1480"/><path d="M120 550H1480"/><path d="M120 660H1480"/>
+    <path d="M280 140V760"/><path d="M520 140V760"/><path d="M760 140V760"/><path d="M1000 140V760"/><path d="M1240 140V760"/>
+  </g>
+  <rect width="920" height="900" fill="url(#left)"/>
+</svg>
