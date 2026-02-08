@@ -12,6 +12,7 @@ const routeConfigs = [
       description:
         'Study a clear timeline of Rome with major events from 753 BC to 476 AD, spanning the Roman Kingdom, Roman Republic, and Roman Empire.',
       canonical: 'https://timelineofrome.com/timeline/',
+      ogUrl: 'https://timelineofrome.com/timeline/',
       robots: 'index, follow',
     },
   },
@@ -23,6 +24,7 @@ const routeConfigs = [
       description:
         'Explore a student-friendly timeline of Rome from 753 BC to 476 AD, covering major events across the Roman Kingdom, Roman Republic, and Roman Empire.',
       canonical: 'https://timelineofrome.com/',
+      ogUrl: 'https://timelineofrome.com/animated/',
       robots: 'noindex, follow',
     },
   },
@@ -65,7 +67,7 @@ function renderRouteHtml(rootHtml, metadata) {
   routeHtml = replaceRequired(
     routeHtml,
     /<meta\s+property="og:url"\s+content="[^"]*"\s*\/?>/,
-    `<meta property="og:url" content="${metadata.canonical}" />`,
+    `<meta property="og:url" content="${metadata.ogUrl ?? metadata.canonical}" />`,
     'meta[property="og:url"]'
   );
   routeHtml = replaceRequired(
