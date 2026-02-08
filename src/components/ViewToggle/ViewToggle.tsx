@@ -35,7 +35,7 @@ export function ViewToggle({ theme = 'light' }: ViewToggleProps) {
         Animated
       </Link>
       <Link
-        to="/timeline"
+        to="/timeline/"
         className={`${styles.toggleOption} ${!isAnimated ? styles.toggleActive : ''}`}
         onClick={() => handleViewSwitch('timeline')}
       >

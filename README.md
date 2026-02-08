@@ -91,8 +91,8 @@ Data layer events emitted by the app:
 ## Routes
 
 - `/` is the animated timeline view (default experience).
-- `/animated` is a compatibility alias for the animated view.
-- `/timeline` is the detailed scroll-based timeline view.
+- `/animated/` is a compatibility alias for the animated view (intentionally non-indexable).
+- `/timeline/` is the canonical, indexable detailed timeline route.
 
 ## Deploy
 
