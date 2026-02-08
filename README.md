@@ -111,3 +111,22 @@ so it serves correctly from the custom domain root.
 - LinkedIn project thumbnail (landscape): `public/linkedin/linkedin-project-1200x627.png`
 - LinkedIn project thumbnail (square): `public/linkedin/linkedin-project-1080x1080.png`
 - Open Graph SVG source: `public/og-timeline-of-rome.svg`
+
+## Reddit Promotion Kit
+
+- Campaign docs: `docs/reddit/README.md`
+- Subreddit matrix: `docs/reddit/subreddit-targeting.md`
+- Post drafts: `docs/reddit/posts/`
+- Tracking + logs: `docs/reddit/tracking/`
+- Response playbooks: `docs/reddit/responses/`
+
+Helper scripts:
+
+- `npm run reddit:utm` regenerates `docs/reddit/tracking/utm-links.csv`
+- `npm run reddit:utm:verify` validates UTM contract values for all generated links
+- `npm run reddit:first-post-link` prints the exact tracked URL for the first `ancienthistory` post
+- `npm run reddit:launch:prepare` runs UTM generation + verification + first-post link output
+- `npm run reddit:capture` captures fixed-viewport (`1200x627`) static and source clip assets from `/timeline`
+- `npm run reddit:gif` creates `docs/reddit/assets/reddit-scroll-12s.gif` from the webm source clip
+- `npm run reddit:verify` validates media widths and required files
+- `npm run reddit:assets` runs capture -> gif -> verify in sequence

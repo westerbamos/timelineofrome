@@ -1,6 +1,8 @@
 .DS_Store
 node_modules/
 dist/
+docs/
+scripts/reddit/
 .claude/
 .env
 .env.*

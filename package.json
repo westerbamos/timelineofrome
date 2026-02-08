@@ -7,7 +7,15 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "reddit:utm": "node scripts/reddit/generate-utm-links.mjs",
+    "reddit:utm:verify": "node scripts/reddit/verify-utm-links.mjs",
+    "reddit:first-post-link": "node scripts/reddit/print-reddit-link.mjs ancienthistory post1",
+    "reddit:launch:prepare": "npm run reddit:utm && npm run reddit:utm:verify && npm run reddit:first-post-link",
+    "reddit:capture": "node scripts/reddit/capture-reddit-assets.mjs",
+    "reddit:gif": "bash scripts/reddit/make-scroll-gif.sh",
+    "reddit:verify": "bash scripts/reddit/verify-assets.sh",
+    "reddit:assets": "npm run reddit:capture && npm run reddit:gif && npm run reddit:verify"
   },
   "dependencies": {
     "framer-motion": "^11.0.0",
@@ -24,6 +32,7 @@
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.0",
+    "playwright": "^1.58.2",
     "typescript": "^5.2.0",
     "vite": "^5.0.0"
   }
