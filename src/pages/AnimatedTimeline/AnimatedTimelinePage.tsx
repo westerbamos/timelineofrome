@@ -14,6 +14,7 @@ import {
 import { useKeyboardNavigation } from './hooks/useKeyboardNavigation';
 import { useSwipeNavigation } from './hooks/useSwipeNavigation';
 import { useAutoPlay } from './hooks/useAutoPlay';
+import { trackAnalyticsEvent } from '../../lib/analytics';
 import type { SceneAssetVersion } from './types/scene';
 import styles from './AnimatedTimelinePage.module.css';
 
@@ -176,9 +177,13 @@ export default function AnimatedTimelinePage() {
   }, [hasStarted, isDetailsExpanded]);
 
   const onStartExperience = useCallback(() => {
+    trackAnalyticsEvent('animated_experience_start', {
+      start_event_id: currentEvent.id,
+      start_event_title: currentEvent.title,
+    });
     setHasStarted(true);
     setIsPlaying(!prefersReducedMotion);
-  }, [prefersReducedMotion]);
+  }, [currentEvent.id, currentEvent.title, prefersReducedMotion]);
 
   const onToggleExpanded = useCallback(() => {
     if (isDetailsExpanded) {

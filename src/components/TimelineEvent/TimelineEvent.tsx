@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { trackAnalyticsEvent } from '../../lib/analytics';
 import type { TimelineEvent } from '../../types';
 import { EventDetail } from '../EventDetail/EventDetail';
 import styles from './TimelineEvent.module.css';
@@ -12,6 +13,21 @@ interface TimelineEventProps {
 export function TimelineEventComponent({ event, index }: TimelineEventProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const isMajor = event.significance === 'major';
+  const handleToggleExpand = () => {
+    setIsExpanded((previouslyExpanded) => {
+      const nextExpanded = !previouslyExpanded;
+      if (nextExpanded) {
+        trackAnalyticsEvent('timeline_event_expand', {
+          event_id: event.id,
+          event_title: event.title,
+          event_era: event.era,
+          event_year: event.year,
+          event_significance: event.significance,
+        });
+      }
+      return nextExpanded;
+    });
+  };
 
   return (
     <motion.article
@@ -40,7 +56,7 @@ export function TimelineEventComponent({ event, index }: TimelineEventProps) {
       >
         <button
           className={styles.cardButton}
-          onClick={() => setIsExpanded(!isExpanded)}
+          onClick={handleToggleExpand}
           aria-expanded={isExpanded}
           aria-controls={`event-detail-${event.id}`}
         >

@@ -1,5 +1,6 @@
 import { useState, useEffect, type MouseEvent } from 'react';
 import { motion } from 'framer-motion';
+import { trackAnalyticsEvent } from '../../lib/analytics';
 import { ERAS, type EraType } from '../../types';
 import styles from './Navigation.module.css';
 
@@ -27,6 +28,10 @@ export function Navigation({ currentEra }: NavigationProps) {
       const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - offset;
+
+      trackAnalyticsEvent('timeline_era_navigate', {
+        era_id: eraId,
+      });
 
       window.history.pushState(null, '', `#era-${eraId}`);
       window.scrollTo({
