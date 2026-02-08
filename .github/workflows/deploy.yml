@@ -34,8 +34,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Copy 404.html for SPA routing
-        run: cp dist/index.html dist/404.html
+      - name: Generate route-specific HTML
+        run: node scripts/seo/generate-route-html.mjs
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
